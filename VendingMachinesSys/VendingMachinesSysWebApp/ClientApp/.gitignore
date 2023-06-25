@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# Custom User-Configured
+.angular/
+
 # compiled output
 /dist
 /dist-server

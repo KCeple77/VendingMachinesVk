@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj": {}
+    "C:\\Personal\\ZirkanProjekt\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj": {}
   },
   "projects": {
-    "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj": {
+    "C:\\Personal\\ZirkanProjekt\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
+        "projectUniqueName": "C:\\Personal\\ZirkanProjekt\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
         "projectName": "VendingMachinesSysAPI",
-        "projectPath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
+        "projectPath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
         "packagesPath": "C:\\Users\\kristijan.ceple\\.nuget\\packages\\",
-        "outputPath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\obj\\",
+        "outputPath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kristijan.ceple\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,9 +42,31 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Azure.Extensions.AspNetCore.Configuration.Secrets": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

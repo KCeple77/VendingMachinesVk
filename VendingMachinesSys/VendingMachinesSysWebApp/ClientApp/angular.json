@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "VendingMachinesSysWebApp"
+  "defaultProject": "VendingMachinesSysWebApp",
+  "cli": {
+    "analytics": "93c9d0a1-281f-4b70-8ff5-b20fec5f069c"
+  }
 }
