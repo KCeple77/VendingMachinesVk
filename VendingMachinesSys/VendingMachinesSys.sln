@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachinesSysAPI", "VendingMachinesSysAPI\VendingMachinesSysAPI.csproj", "{1AD2D3F4-DCB6-4D71-9D93-B4751BC1DD46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachinesSysWebApp", "VendingMachinesSysWebApp\VendingMachinesSysWebApp.csproj", "{CAB659BD-53BF-4D62-B6A8-755A8CD4881E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AD2D3F4-DCB6-4D71-9D93-B4751BC1DD46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD2D3F4-DCB6-4D71-9D93-B4751BC1DD46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD2D3F4-DCB6-4D71-9D93-B4751BC1DD46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD2D3F4-DCB6-4D71-9D93-B4751BC1DD46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB659BD-53BF-4D62-B6A8-755A8CD4881E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB659BD-53BF-4D62-B6A8-755A8CD4881E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB659BD-53BF-4D62-B6A8-755A8CD4881E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB659BD-53BF-4D62-B6A8-755A8CD4881E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FEADC46-9A19-45BC-835B-64DED0F2868F}
+	EndGlobalSection
+EndGlobal
