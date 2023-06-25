@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj": {}
+    "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj": {}
   },
   "projects": {
-    "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj": {
+    "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
+        "projectUniqueName": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
         "projectName": "VendingMachinesSysAPI",
-        "projectPath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
+        "projectPath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
         "packagesPath": "C:\\Users\\kristijan.ceple\\.nuget\\packages\\",
-        "outputPath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSysAPI\\obj\\",
+        "outputPath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kristijan.ceple\\AppData\\Roaming\\NuGet\\NuGet.Config",

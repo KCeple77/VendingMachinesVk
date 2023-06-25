@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wgv+v+WboRX3b81UrLhaiNFV2aBdkMYi23O036aoywuSWt8vcd2V5sNK2j8JUF5jqKrGmVjRCR74lVMI2R214A==",
+  "dgSpecHash": "gDmGVW0KRdPz4K4BDWhv0DyfA2R4ENQ2m94B6pwrKDB7W3nkWz0zfKUep2ojOHcn9FoYASf6NggqKIppfqF5bA==",
   "success": true,
-  "projectFilePath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
+  "projectFilePath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesSys\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kristijan.ceple\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.7\\microsoft.aspnetcore.openapi.7.0.7.nupkg.sha512",
     "C:\\Users\\kristijan.ceple\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
