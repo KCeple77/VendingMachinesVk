@@ -1,2 +1,0 @@
-# VendingMachineVk
-Uni Project
