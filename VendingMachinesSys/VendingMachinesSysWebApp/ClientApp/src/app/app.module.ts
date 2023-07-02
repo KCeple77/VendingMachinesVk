@@ -14,6 +14,10 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
 import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { VendingSysToolbarComponent } from './vending-sys-toolbar/vending-sys-toolbar.component';
+import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,8 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    VendingSysToolbarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,8 +34,14 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
     HttpClientModule,
     FormsModule,
     ApiAuthorizationModule,
+    ToolbarModule,
+    ButtonModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' }
+      { path: '', component: LandingPageComponent, pathMatch: 'full' },
+      { path: 'pages/home', component: HomeComponent, pathMatch:'full'},
+      { path: 'pages/locations', component: HomeComponent, pathMatch:'full'},
+      { path: 'pages/machines-list', component: HomeComponent, pathMatch:'full'},
+      { path: 'pages/about', component: HomeComponent, pathMatch:'full'},
     ])
   ],
   providers: [

@@ -2,7 +2,7 @@
 @import "primeng/resources/themes/mira/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
-
+@import '~primeflex/primeflex.css';
 
 /* Provide sufficient contrast against white background */
 /*

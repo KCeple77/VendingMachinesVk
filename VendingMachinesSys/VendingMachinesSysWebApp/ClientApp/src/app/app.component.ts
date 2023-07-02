@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
-import { LoginMenuComponent } from 'src/api-authorization/login-menu/login-menu.component';
 
 @Component({
   selector: 'app-root',
