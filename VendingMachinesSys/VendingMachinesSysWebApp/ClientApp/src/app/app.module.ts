@@ -18,15 +18,23 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { VendingSysToolbarComponent } from './vending-sys-toolbar/vending-sys-toolbar.component';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
+import { LocationsComponent } from './locations/locations.component';
+import { MachinesListComponent } from './machines-list/machines-list.component';
+import { AboutComponent } from './about/about.component';
+import { CarouselModule } from 'primeng/carousel';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
-    VendingSysToolbarComponent
+    VendingSysToolbarComponent,
+    MapComponent,
+    LocationsComponent,
+    AboutComponent,
+    PageNotFoundComponent,
+    NavMenuComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -36,12 +44,14 @@ import { ButtonModule } from 'primeng/button';
     ApiAuthorizationModule,
     ToolbarModule,
     ButtonModule,
+    CarouselModule,
     RouterModule.forRoot([
       { path: '', component: LandingPageComponent, pathMatch: 'full' },
       { path: 'pages/home', component: HomeComponent, pathMatch:'full'},
-      { path: 'pages/locations', component: HomeComponent, pathMatch:'full'},
-      { path: 'pages/machines-list', component: HomeComponent, pathMatch:'full'},
-      { path: 'pages/about', component: HomeComponent, pathMatch:'full'},
+      { path: 'pages/locations', component: LocationsComponent, pathMatch:'full'},
+      { path: 'pages/machines-list', component: MachinesListComponent, pathMatch:'full'},
+      { path: 'pages/about', component: AboutComponent, pathMatch:'full'},
+      { path: '**', component: PageNotFoundComponent, pathMatch: 'full' }
     ])
   ],
   providers: [
