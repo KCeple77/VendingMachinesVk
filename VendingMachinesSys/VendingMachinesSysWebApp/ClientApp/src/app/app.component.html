@@ -1,5 +1,5 @@
 <body>
-  <app-vending-sys-toolbar></app-vending-sys-toolbar>
+  <app-vending-sys-toolbar *ngIf="showToolbar"></app-vending-sys-toolbar>
   <main class="p-component">
     <router-outlet></router-outlet>
   </main>

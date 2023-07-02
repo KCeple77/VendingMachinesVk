@@ -24,17 +24,18 @@ import { AboutComponent } from './about/about.component';
 import { CarouselModule } from 'primeng/carousel';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MapComponent } from './map/map.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     VendingSysToolbarComponent,
-    MapComponent,
     LocationsComponent,
     AboutComponent,
     PageNotFoundComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -45,13 +46,15 @@ import { MapComponent } from './map/map.component';
     ToolbarModule,
     ButtonModule,
     CarouselModule,
+    LeafletModule,
     RouterModule.forRoot([
       { path: '', component: LandingPageComponent, pathMatch: 'full' },
       { path: 'pages/home', component: HomeComponent, pathMatch:'full'},
       { path: 'pages/locations', component: LocationsComponent, pathMatch:'full'},
       { path: 'pages/machines-list', component: MachinesListComponent, pathMatch:'full'},
       { path: 'pages/about', component: AboutComponent, pathMatch:'full'},
-      { path: '**', component: PageNotFoundComponent, pathMatch: 'full' }
+      { path: 'page-not-found', component: PageNotFoundComponent, pathMatch:'full'},
+      { path: '**', redirectTo: 'page-not-found', pathMatch: 'full' }
     ])
   ],
   providers: [
