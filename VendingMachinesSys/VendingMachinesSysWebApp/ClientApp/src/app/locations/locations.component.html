@@ -1,7 +1,14 @@
 <!-- <app-map></app-map> -->
 
-<div style="height: 100vh"
-     leaflet
-     [leafletOptions]="options"
-     [leafletLayersControl]="layersControl">
+<div class="flex">
+  <div class="justify-content-center" style="height: 100vh; width: 20%">
+    <p-tree class="w-full md:w-30rem" [value]="files" (onNodeExpand)="nodeExpand($event)" [loading]="loading"></p-tree>
+  </div>
+
+  <div
+       style="height: 100vh; width: 80%"
+       leaflet
+       [leafletOptions]="options"
+       [leafletLayersControl]="layersControl">
+  </div>
 </div>

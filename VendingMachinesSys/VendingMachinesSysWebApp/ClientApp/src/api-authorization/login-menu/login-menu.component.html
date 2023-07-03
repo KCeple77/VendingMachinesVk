@@ -1,4 +1,5 @@
-<p-toolbar>
+<div class="card">
+  <p-toolbar>
     <ng-content></ng-content>
 
     <div class="p-toolbar-group-end" *ngIf="isAuthenticated | async">
@@ -11,3 +12,4 @@
         <p-button [routerLink]='["/authentication/login"]' styleClass="p-button-secondary mr-2" label="Login"></p-button>
     </div>
 </p-toolbar>
+</div>
