@@ -31,7 +31,7 @@ namespace VendingMachineAPI
 
             // Add IdentityServer services
             var migrationsAssembly = typeof(Startup).Assembly.GetName().Name;
-            services.AddIdentity<YourUserClass, IdentityRole>()
+            services.AddIdentity<AppUser, IdentityRole>()
                 .AddEntityFrameworkStores<VendingMachineDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -48,7 +48,7 @@ namespace VendingMachineAPI
                         builder.UseSqlServer(connectionString,
                             sql => sql.MigrationsAssembly(migrationsAssembly));
                 })
-                .AddAspNetIdentity<YourUserClass>();
+                .AddAspNetIdentity<AppUser>();
 
             // ... add additional services and configurations
 
@@ -77,10 +77,5 @@ namespace VendingMachineAPI
                 endpoints.MapControllers();
             });
         }
-    }
-
-    public class AppUser : IdentityUser
-    {
-        // Add your additional user properties here
     }
 }
