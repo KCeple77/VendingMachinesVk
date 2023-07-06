@@ -22,7 +22,9 @@ namespace VendingMachineAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<VendingMachine>>> GetVendingMachines()
         {
-            var vendingMachines = await _dbContext.VendingMachines.ToListAsync();
+            var vendingMachines = await _dbContext.VendingMachines
+                .Include(vm => vm.Products) // Include related products
+                .ToListAsync();
 
             if (vendingMachines == null || vendingMachines.Count == 0)
             {
@@ -33,9 +35,11 @@ namespace VendingMachineAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<VendingMachine>> GetVendingMachine(int SerialNumber)
+        public async Task<ActionResult<VendingMachine>> GetVendingMachine(int id)
         {
-            var vendingMachine = await _dbContext.VendingMachines.FindAsync(SerialNumber);
+            var vendingMachine = await _dbContext.VendingMachines
+                .Include(vm => vm.Products) // Include related products
+                .FirstOrDefaultAsync(vm => vm.SerialNumber == id);
 
             if (vendingMachine == null)
             {
