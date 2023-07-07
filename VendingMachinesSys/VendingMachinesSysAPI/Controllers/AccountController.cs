@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using VendingMachineAPI.Models;
+using VendingMachinesSysAPI.Models;
 
 namespace VendingMachinesSysAPI.Controllers
 {
@@ -8,10 +8,10 @@ namespace VendingMachinesSysAPI.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly UserManager<AppUser> _userManager;
-        private readonly SignInManager<AppUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -22,7 +22,7 @@ namespace VendingMachinesSysAPI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new AppUser
+                var user = new IdentityUser
                 {
                     UserName = model.Email,
                     Email = model.Email

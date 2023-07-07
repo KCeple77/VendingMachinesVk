@@ -1,14 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using VendingMachineAPI.Models;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace VendingMachineAPI.Models
 {
-    public class VendingMachineDbContext : DbContext
+    public class VendingMachineDbContext : IdentityDbContext
     {
         public VendingMachineDbContext(DbContextOptions<VendingMachineDbContext> options)
-        : base(options)
+            : base(options)
         {
         }
 
@@ -17,6 +15,8 @@ namespace VendingMachineAPI.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            // Add any additional configuration here as needed
         }
     }
 }
