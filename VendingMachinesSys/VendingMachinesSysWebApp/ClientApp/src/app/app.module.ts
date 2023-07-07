@@ -26,8 +26,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { MapComponent } from './map/map.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { AnimateModule } from 'primeng/animate';
-import { TreeModule } from 'primeng/tree';
 import { NodeService } from 'src/services/nodeservice';
+import { DataViewModule } from 'primeng/dataview';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,7 @@ import { NodeService } from 'src/services/nodeservice';
     CarouselModule,
     LeafletModule,
     AnimateModule,
-    TreeModule,
+    DataViewModule,
     RouterModule.forRoot([
       { path: '', component: LandingPageComponent, pathMatch: 'full' },
       { path: 'pages/home', component: HomeComponent, pathMatch:'full'},
