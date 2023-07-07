@@ -22,7 +22,7 @@ namespace VendingMachineAPI.Controllers
         public async Task<ActionResult<IEnumerable<VendingMachine>>> GetVendingMachines()
         {
             var vendingMachines = await _dbContext.VendingMachines
-                .Include(vm => vm.Products) // Include related products
+                //.Include(vm => vm.Products) // Include related products
                 .ToListAsync();
 
             if (vendingMachines == null || vendingMachines.Count == 0)
@@ -37,7 +37,7 @@ namespace VendingMachineAPI.Controllers
         public async Task<ActionResult<VendingMachine>> GetVendingMachine(int id)
         {
             var vendingMachine = await _dbContext.VendingMachines
-                .Include(vm => vm.Products) // Include related products
+                //.Include(vm => vm.Products) // Include related products
                 .FirstOrDefaultAsync(vm => vm.SerialNumber == id);
 
             if (vendingMachine == null)
@@ -72,7 +72,7 @@ namespace VendingMachineAPI.Controllers
                 return NotFound();
             }
 
-            existingVendingMachine.Products = vendingMachine.Products;
+            //existingVendingMachine.Products = vendingMachine.Products;
             existingVendingMachine.Locations = vendingMachine.Locations;
 
             _dbContext.Entry(existingVendingMachine).State = EntityState.Modified;

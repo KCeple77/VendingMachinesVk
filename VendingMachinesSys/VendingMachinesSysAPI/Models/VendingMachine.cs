@@ -7,8 +7,8 @@ namespace VendingMachineAPI.Models
         [Key]
         public int SerialNumber { get; set; }
 
-        [Required]
-        public string? Products { get; set; }
+        //[Required]
+        //public string? Products { get; set; }
 
         [Required]
         public string? Locations { get; set; }
