@@ -8,7 +8,7 @@ using VendingMachinesSysAPI.Models;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
 using Microsoft.AspNetCore.Identity;
-using VendingMachineAPI.Models;
+using VendingMachinesSysAPI.Models;
 
 namespace VendingMachinesSysAPI
 {

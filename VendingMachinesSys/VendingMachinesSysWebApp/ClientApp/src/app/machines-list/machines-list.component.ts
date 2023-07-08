@@ -22,6 +22,7 @@ export class MachinesListComponent {
       });
 
 
+
       // Add products to machines here and prepare them for the list
 
     }

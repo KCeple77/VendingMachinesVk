@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using VendingMachineAPI.Models;
 
 namespace VendingMachinesSysAPI.Models
 {
@@ -9,7 +8,7 @@ namespace VendingMachinesSysAPI.Models
         public int ProductId { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string NameOf { get; set; }
 
         [Required]
         public decimal Price { get; set; }

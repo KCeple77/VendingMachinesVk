@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace VendingMachineAPI.Models
+namespace VendingMachinesSysAPI.Models
 {
     public class VendingMachine
     {

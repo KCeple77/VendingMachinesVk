@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using VendingMachinesSysAPI.Models;
 
-namespace VendingMachineAPI.Models
+namespace VendingMachinesSysAPI.Models
 {
     public class VendingMachineDbContext : IdentityDbContext
     {
@@ -11,6 +12,7 @@ namespace VendingMachineAPI.Models
         }
 
         public DbSet<VendingMachine> VendingMachines { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
