@@ -17,8 +17,9 @@ namespace VendingMachinesSysAPI.Models
         [Required]
         public int Quantity { get; set; }
 
+        [Required]
         public int VendingMachineSerialNumber { get; set; }
-        public VendingMachine VendingMachine { get; set; }
+        //public VendingMachine VendingMachine { get; set; }
 
     }
 }

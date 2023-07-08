@@ -14,11 +14,16 @@ export class MachinesListComponent {
   constructor(private vendingMachinesService: VendingMachinesService) { }
 
     ngOnInit() {
+      // Receive data
       this.vendingMachinesService.getVendingMachines().subscribe(data => {
         console.log("Received Vending Machines data:");
         console.log(data);
         this.vendingMachines = data;
       });
+
+
+      // Add products to machines here and prepare them for the list
+
     }
 
 }
