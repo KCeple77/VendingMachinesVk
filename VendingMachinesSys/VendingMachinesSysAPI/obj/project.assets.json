@@ -4679,19 +4679,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kristijan.ceple\\.nuget\\packages\\": {}
+    "C:\\Users\\mlade\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Personal\\ZirkanProjekt\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
+      "projectUniqueName": "C:\\Users\\mlade\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
       "projectName": "VendingMachinesSysAPI",
-      "projectPath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
-      "packagesPath": "C:\\Users\\kristijan.ceple\\.nuget\\packages\\",
-      "outputPath": "C:\\Personal\\ZirkanProjekt\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\obj\\",
+      "projectPath": "C:\\Users\\mlade\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\VendingMachinesSysAPI.csproj",
+      "packagesPath": "C:\\Users\\mlade\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mlade\\VendingMachinesVk\\VendingMachinesSys\\VendingMachinesSysAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kristijan.ceple\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mlade\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4700,8 +4700,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://gdigroup.pkgs.visualstudio.com/469fdf70-720a-4e26-b7ec-5b6c493c5edc/_packaging/GDi.Ensemble/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {

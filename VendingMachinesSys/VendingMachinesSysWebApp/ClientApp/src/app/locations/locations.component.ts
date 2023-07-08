@@ -10,35 +10,56 @@ import { VendingMachinesService } from 'src/services/vending.machines.service';
   styleUrls: ['./locations.component.css'],
 })
 export class LocationsComponent implements OnInit {
-
   vendingMachines!: VendingMachine[];
 
   options = {
     layers: [
-      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
+      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '...',
+      }),
     ],
-    zoom: 5,
-    center: latLng(46.879966, -121.726909)
+    zoom: 8,
+    center: latLng(45.784585, 15.966989),
   };
 
   layersControl = {
     baseLayers: {
-      'Open Street Map': tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' }),
-      'Open Cycle Map': tileLayer('https://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
+      'Open Street Map': tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        { maxZoom: 18, attribution: '...' }
+      ),
+      'Open Cycle Map': tileLayer(
+        'https://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png',
+        { maxZoom: 18, attribution: '...' }
+      ),
     },
     overlays: {
-      'Big Circle': circle([ 46.95, -122 ], { radius: 5000 }),
-      'Big Square': polygon([[ 46.8, -121.55 ], [ 46.9, -121.55 ], [ 46.9, -121.7 ], [ 46.8, -121.7 ]])
-    }
+      'Big Circle': circle([46.95, -122], { radius: 5000 }),
+      'Big Square': polygon([
+        [46.8, -121.55],
+        [46.9, -121.55],
+        [46.9, -121.7],
+        [46.8, -121.7],
+      ]),
+    },
+  };
+
+  constructor(private vendingMachinesService: VendingMachinesService) {}
+
+  ngOnInit() {
+    this.vendingMachinesService.getVendingMachines().subscribe((data) => {
+      console.log('Received Vending Machines data:');
+      console.log(data);
+      this.vendingMachines = data;
+    });
   }
 
-  constructor(private vendingMachinesService: VendingMachinesService) { }
-
-    ngOnInit() {
-      this.vendingMachinesService.getVendingMachines().subscribe(data => {
-        console.log("Received Vending Machines data:");
-        console.log(data);
-        this.vendingMachines = data;
-      });
-    }
-}
+  showMachineData(machine: VendingMachine) {
+    console.log('Machine:', machine);
+    console.log('Latitude:', machine.latitude);
+    console.log('Longitude:', machine.longitude);
+    this.options.center = latLng(machine.latitude, machine.longitude);
+    this.options.zoom = 16; 
+  }
+} 

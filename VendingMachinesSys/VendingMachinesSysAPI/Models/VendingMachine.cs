@@ -7,11 +7,11 @@ namespace VendingMachineAPI.Models
         [Key]
         public int SerialNumber { get; set; }
 
-        //[Required]
-        //public string? Products { get; set; }
+        [Required]
+        public string Locations { get; set; }
 
         [Required]
-        public string? Locations { get; set; }
+        public System.Data.Entity.Spatial.DbGeography latLong { get; set; }
 
         // Add other properties as needed
     }

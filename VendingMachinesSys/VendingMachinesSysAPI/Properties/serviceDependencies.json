@@ -4,9 +4,9 @@
       "type": "secrets",
       "connectionId": "VaultUri"
     },
-    "mssql1": {
+    "mssql2": {
       "type": "mssql",
-      "connectionId": "ZirkanDBConnectionString",
+      "connectionId": "ConnectionStrings:DefaultConnection",
       "dynamicId": null
     }
   }
