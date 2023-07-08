@@ -62,6 +62,6 @@ export class LocationsComponent implements OnInit {
     console.log('Latitude:', machine.latitude);
     console.log('Longitude:', machine.longitude);
     this.center = latLng(machine.latitude, machine.longitude);
-    this.zoom = 16; 
+    this.zoom = 16;
   }
-} 
+}

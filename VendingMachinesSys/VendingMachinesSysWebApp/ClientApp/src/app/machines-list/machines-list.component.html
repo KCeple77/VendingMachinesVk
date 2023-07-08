@@ -1,5 +1,6 @@
 <p-accordion [multiple]="true">
-  <p-accordionTab *ngFor="let vendingMachine of this.vendingMachines" header="{{ vendingMachine.serialNumber }} - {{ vendingMachine.locations }}">
-    <p> Extra info here </p>
+  <p-accordionTab *ngFor="let vendingMachine of this.vendingMachinesList" header="{{ vendingMachine.serialNumber }} - {{ vendingMachine.locations }}">
+    <p *ngIf="this.hasVendingMachineGotAnyProducts(vendingMachine); else vendingMachinesNoProducts"> Got products! </p>
+    <ng-template #vendingMachinesNoProducts>Vending machine hasn't got any products!</ng-template>
   </p-accordionTab>
 </p-accordion>
