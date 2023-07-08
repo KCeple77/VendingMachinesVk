@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { tileLayer, latLng, circle, polygon } from 'leaflet';
 import { Observable } from 'rxjs';
+import { VendingMachine } from 'src/domain/VendingMachine';
+import { VendingMachinesService } from 'src/services/vending.machines.service';
 
 @Component({
   selector: 'app-locations',
@@ -9,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class LocationsComponent implements OnInit {
 
-  machinesData: Observable<any> = new Observable();
+  vendingMachines!: VendingMachine[];
 
   options = {
     layers: [
@@ -30,8 +32,13 @@ export class LocationsComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private vendingMachinesService: VendingMachinesService) { }
 
     ngOnInit() {
+      this.vendingMachinesService.getVendingMachines().subscribe(data => {
+        console.log("Received Vending Machines data:");
+        console.log(data);
+        this.vendingMachines = data;
+      });
     }
 }

@@ -23,11 +23,10 @@ import { MachinesListComponent } from './machines-list/machines-list.component';
 import { AboutComponent } from './about/about.component';
 import { CarouselModule } from 'primeng/carousel';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { MapComponent } from './map/map.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { AnimateModule } from 'primeng/animate';
-import { NodeService } from 'src/services/nodeservice';
 import { DataViewModule } from 'primeng/dataview';
+import { VendingMachinesService } from 'src/services/vending.machines.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +37,6 @@ import { DataViewModule } from 'primeng/dataview';
     AboutComponent,
     PageNotFoundComponent,
     NavMenuComponent,
-    MapComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -64,7 +62,7 @@ import { DataViewModule } from 'primeng/dataview';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true },
-    NodeService
+    VendingMachinesService
   ],
   bootstrap: [AppComponent]
 })

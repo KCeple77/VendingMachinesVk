@@ -70,6 +70,13 @@ namespace VendingMachinesSysAPI
 
             app.UseHttpsRedirection();
             app.UseRouting();
+
+            app.UseCors(builder =>
+                builder.WithOrigins("https://localhost:44445")
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+            );
+
             app.UseAuthentication();
             app.UseAuthorization();
 
