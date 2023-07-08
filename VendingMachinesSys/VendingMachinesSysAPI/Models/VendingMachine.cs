@@ -11,8 +11,10 @@ namespace VendingMachinesSysAPI.Models
         public string Locations { get; set; }
 
         [Required]
-        public System.Data.Entity.Spatial.DbGeography latLong { get; set; }
+        public double Latitude { get; set; }
 
-        // Add other properties as needed
+        [Required]
+        public double Longitude { get; set; }
+
     }
 }

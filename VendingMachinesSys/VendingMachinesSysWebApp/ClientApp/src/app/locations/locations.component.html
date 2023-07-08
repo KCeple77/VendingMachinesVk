@@ -23,6 +23,8 @@
     style="height: 100vh; width: 80%"
     leaflet
     [leafletOptions]="options"
+    [(leafletZoom)]="this.zoom"
+    [(leafletCenter)]="this.center"
     [leafletLayersControl]="layersControl"
   ></div>
 </div>

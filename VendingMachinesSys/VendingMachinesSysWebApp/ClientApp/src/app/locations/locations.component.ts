@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { tileLayer, latLng, circle, polygon } from 'leaflet';
+import { tileLayer, latLng, circle, polygon, LatLng } from 'leaflet';
 import { Observable } from 'rxjs';
 import { VendingMachine } from 'src/domain/VendingMachine';
 import { VendingMachinesService } from 'src/services/vending.machines.service';
@@ -11,6 +11,8 @@ import { VendingMachinesService } from 'src/services/vending.machines.service';
 })
 export class LocationsComponent implements OnInit {
   vendingMachines!: VendingMachine[];
+  zoom: number = 8;
+  center: LatLng = latLng(45.784585, 15.966989);
 
   options = {
     layers: [
@@ -19,8 +21,8 @@ export class LocationsComponent implements OnInit {
         attribution: '...',
       }),
     ],
-    zoom: 8,
-    center: latLng(45.784585, 15.966989),
+    zoom: this.zoom,
+    center: this.center,
   };
 
   layersControl = {
@@ -59,7 +61,7 @@ export class LocationsComponent implements OnInit {
     console.log('Machine:', machine);
     console.log('Latitude:', machine.latitude);
     console.log('Longitude:', machine.longitude);
-    this.options.center = latLng(machine.latitude, machine.longitude);
-    this.options.zoom = 16; 
+    this.center = latLng(machine.latitude, machine.longitude);
+    this.zoom = 16; 
   }
 } 
