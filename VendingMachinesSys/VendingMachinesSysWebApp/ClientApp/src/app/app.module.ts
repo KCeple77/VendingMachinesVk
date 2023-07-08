@@ -27,6 +27,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { AnimateModule } from 'primeng/animate';
 import { DataViewModule } from 'primeng/dataview';
 import { VendingMachinesService } from 'src/services/vending.machines.service';
+import { AccordionModule } from 'primeng/accordion';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { VendingMachinesService } from 'src/services/vending.machines.service';
     AboutComponent,
     PageNotFoundComponent,
     NavMenuComponent,
+    MachinesListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -50,6 +52,7 @@ import { VendingMachinesService } from 'src/services/vending.machines.service';
     LeafletModule,
     AnimateModule,
     DataViewModule,
+    AccordionModule,
     RouterModule.forRoot([
       { path: '', component: LandingPageComponent, pathMatch: 'full' },
       { path: 'pages/home', component: HomeComponent, pathMatch:'full'},

@@ -1,1 +1,5 @@
-<p>machines-list works!</p>
+<p-accordion [multiple]="true">
+  <p-accordionTab *ngFor="let vendingMachine of this.vendingMachines" header="{{ vendingMachine.serialNumber }} - {{ vendingMachine.locations }}">
+    <p> Extra info here </p>
+  </p-accordionTab>
+</p-accordion>

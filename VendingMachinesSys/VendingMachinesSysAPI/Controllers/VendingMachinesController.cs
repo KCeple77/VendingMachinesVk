@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using VendingMachineAPI.Models;
+using VendingMachinesSysAPI.Models;
 
-namespace VendingMachineAPI.Controllers
+namespace VendingMachinesSysAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
