@@ -16,7 +16,6 @@ import { SplitButtonModule } from 'primeng/splitbutton';
     HttpClientModule,
     ToolbarModule,
     ButtonModule,
-    SplitButtonModule,
     RouterModule.forChild(
       [
         { path: ApplicationPaths.Register, component: LoginComponent },

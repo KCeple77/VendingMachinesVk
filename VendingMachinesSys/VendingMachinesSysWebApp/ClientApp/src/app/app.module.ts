@@ -6,7 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from '../api-authorization/login/login.component';
+
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
@@ -28,6 +28,8 @@ import { AnimateModule } from 'primeng/animate';
 import { DataViewModule } from 'primeng/dataview';
 import { VendingMachinesService } from 'src/services/vending.machines.service';
 import { AccordionModule } from 'primeng/accordion';
+
+
 
 @NgModule({
   declarations: [
@@ -53,6 +55,7 @@ import { AccordionModule } from 'primeng/accordion';
     AnimateModule,
     DataViewModule,
     AccordionModule,
+    ApiAuthorizationModule,
     RouterModule.forRoot([
       { path: '', component: LandingPageComponent, pathMatch: 'full' },
       { path: 'pages/home', component: HomeComponent, pathMatch:'full'},

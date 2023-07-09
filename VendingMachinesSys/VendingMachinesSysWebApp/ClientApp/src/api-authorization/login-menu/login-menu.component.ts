@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthorizeService } from '../authorize.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-login-menu',
