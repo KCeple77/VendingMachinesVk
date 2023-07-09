@@ -1,6 +1,9 @@
 Stack: .NET Core + Angular
+
 SQL: Microsoft SQL
+
 Hosting: Azure
+
 College: Mathos
 
 
