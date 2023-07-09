@@ -1,15 +1,22 @@
-<p-accordion [multiple]="true">
-  <p-accordionTab *ngFor="let vendingMachine of this.vendingMachinesList" header="{{ vendingMachine.serialNumber }} - {{ vendingMachine.locations }}">
-    <p *ngIf="this.hasVendingMachineGotAnyProducts(vendingMachine); else vendingMachinesNoProducts">
-      <div *ngFor="let currProd of this.vendingMachine2Products.get(vendingMachine.serialNumber)">
-        Product ID: {{ currProd.productId }} <br/>
-        Name: {{ currProd.name }} <br/>
-        Price: {{ currProd.price }}€ <br/>
-        Quantity: {{ currProd.quantity }} <br/>
-        <hr/>
+<div class="card">
+  <p-dataView #dv [value]="this.vendingMachinesList" layout="grid">
+    <ng-template let-machine pTemplate="gridItem">
+      <div class="col-12 sm:col-6 lg:col-12 xl:col-4 p-2">
+        <div class="p-4 border-1 surface-border surface-card border-round" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <p-image src="../../assets/vending-machine.png" alt="Image" width="300" [preview]="true"></p-image>
+          <div class="text-2xl font-bold text-900">{{ machine.serialNumber }}</div>
+          Location: {{ machine.locations }}
+        </div>
       </div>
-    <ng-template #vendingMachinesNoProducts>
-      No products listed for this vending machine!
+
+      <!-- <div class="col-12 clickable-machine">
+        <div
+          class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4"
+        >
+          <div class="text-2xl font-bold text-900">{{ machine.serialNumber }}</div>
+          <div>Location: {{ machine.locations }}</div>
+        </div>
+      </div> -->
     </ng-template>
-  </p-accordionTab>
-</p-accordion>
+  </p-dataView>
+</div>

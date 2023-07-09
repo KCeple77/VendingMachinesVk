@@ -26,6 +26,7 @@ import { DataViewModule } from 'primeng/dataview';
 import { VendingMachinesService } from 'src/services/vending.machines.service';
 import { AccordionModule } from 'primeng/accordion';
 import { MachinesComponent } from './machines/machines.component';
+import { ImageModule } from 'primeng/image';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { MachinesComponent } from './machines/machines.component';
     AnimateModule,
     DataViewModule,
     AccordionModule,
+    ImageModule,
     RouterModule.forRoot([
       { path: '', component: LandingPageComponent, pathMatch: 'full' },
       { path: 'pages/home', component: HomeComponent, pathMatch:'full'},
