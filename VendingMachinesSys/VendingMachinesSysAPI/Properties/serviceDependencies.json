@@ -13,6 +13,9 @@
       "type": "mssql",
       "connectionId": "ConnectionStrings:VSK1",
       "dynamicId": null
+    },
+    "apis1": {
+      "type": "apis"
     }
   }
 }
