@@ -1,11 +1,9 @@
-<!-- <app-map></app-map> -->
-
 <div class="flex">
   <div class="justify-content-center" style="height: 100vh; width: 20%">
     <div class="card">
-      <p-dataView #dv [value]="this.vendingMachines" [rows]="5" [paginator]="true">
+      <p-dataView #dv [value]="vendingMachines" [rows]="5" [paginator]="true">
         <ng-template let-machine pTemplate="listItem">
-          <div class="col-12">
+          <div class="col-12 clickable-machine">
             <div
               class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4"
               (click)="showMachineData(machine)"
@@ -23,8 +21,9 @@
     style="height: 100vh; width: 80%"
     leaflet
     [leafletOptions]="options"
-    [(leafletZoom)]="this.zoom"
-    [(leafletCenter)]="this.center"
+    [(leafletZoom)]="zoom"
+    [(leafletCenter)]="center"
     [leafletLayersControl]="layersControl"
+    (leafletMapReady)="onMapReady($event)"
   ></div>
 </div>
