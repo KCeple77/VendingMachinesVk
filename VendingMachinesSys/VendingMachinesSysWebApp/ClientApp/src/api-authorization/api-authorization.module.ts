@@ -8,13 +8,12 @@ import { ApplicationPaths } from './api-authorization.constants';
 import { HttpClientModule } from '@angular/common/http';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
-import { SplitButtonModule } from 'primeng/splitbutton';
 
 @NgModule({
   imports: [
+    ToolbarModule,
     CommonModule,
     HttpClientModule,
-    ToolbarModule,
     ButtonModule,
     RouterModule.forChild(
       [
