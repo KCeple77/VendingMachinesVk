@@ -1,1 +1,82 @@
-<p>about works!</p>
+<header>
+    <h1>O nama</h1>
+  </header>
+  
+  <section class="about-section">
+    <div class="owner-details">
+      <div class="owner-image">
+        <img src="assets/icons/owner.jpg" alt="Owner">
+      </div>
+      <div class="owner-info">
+        <h2>Ante Puljić</h2>
+        <p>Upoznajte našeg osnivača i vlasnika, Antu! Ante je strastveni ljubitelj kave s velikim iskustvom i stručnošću u industriji. Svoju ljubav prema kavi pretvorio je u poslovnu viziju i osnovao našu tvrtku, koja se prvenstveno specijalizirala za pružanje vrhunskih aparata za kavu, a kasnije i ostalih usluga.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="separation-line">
+    <div class="decorative-line"></div>
+  </section>
+  
+  <section class="additional-info">
+    <h3>Poslovanje</h3>
+    <p>Upoznajte našu tvrtku, koja se ponosi širokom mrežom aparata za kavu diljem Slavonije. Sa više od 40 aparata postavljenih na različitim lokacijama, predstavljamo lidera u području pružanja vrhunskog kvaliteta kave svim našim korisnicima. Naša misija je osigurati da svi naši korisnici mogu uživati u vrhunskom iskustvu pripreme kave. Stoga smo pažljivo odabrali naše aparate za kavu, koji pružaju izvanrednu kvalitetu i jednostavnost korištenja. Bez obzira želite li klasičnu crnu kavu, bogati espresso ili kremasti cappuccino, naši aparati će vam omogućiti da uživate u savršenom napitku.
+  
+      Ponosni smo na našu mrežu aparata koja se prostire diljem Slavonije. Bez obzira na to jeste li u gradu, na selu ili na radnom mjestu, naši aparati su uvijek dostupni kako biste mogli uživati u kavi visoke kvalitete bez ikakvih kompromisa.
+      
+      Naša tvrtka ne samo da pruža vrhunske aparate za kavu, već također pruža i sveobuhvatnu podršku našim klijentima. Naš tim stručnjaka osigurava da vaš aparat uvijek radi besprijekorno. Također nudimo redovito održavanje kako bismo osigurali da je vaša kava uvijek svježa i ukusna.</p>
+  </section>
+  
+  <section class="separation-line">
+    <div class="decorative-line"></div>
+  </section>
+  
+  <section class="centered-text">
+    <h3>Raspolažemo sa 3 vrste aparata:</h3>
+  </section>
+  
+  <section class="gallery-section">
+    <div class="gallery-item">
+      <img src="./assets/icons/v2.png" alt="Image 1">
+      <div class="popup-container">
+        <h3>Aparat sa pićima</h3>
+        <button class="ap1" (click)="openPopup('ap1')">Pogledaj izbor</button>
+        <div class="popup-overlay" *ngIf="isPopupVisible && selectedPopup === 'ap1'">
+          <div class="popup-content">
+            <button class="close-button" (click)="closePopup()">Close</button>
+            <h2>Aparat sa pićima</h2>
+            <p> Coca Cola, Fanta, Sprite, Pepsi, Mountain Dew, Red Bull, Monster Energy, Dr. Pepper, 7Up, Schweppes Tonic, Schweppes Bitter Lemon, Lipton Ice Tea, Nestea, Mirinda, Sunkist, Ginger Ale, Club Mate, Arizona Green Tea, Snapple, Juicy Naranča.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="../assets/icons/v3.png" alt="Image 2">
+      <div class="popup-container">
+        <h3>Aparat za tople napitke</h3>
+        <button class="ap2" (click)="openPopup('ap2')">Pogledaj izbor</button>
+        <div class="popup-overlay" *ngIf="isPopupVisible && selectedPopup === 'ap2'">
+          <div class="popup-content">
+            <button class="close-button" (click)="closePopup()">Close</button>
+            <h2>Aparat za tople napitke</h2>
+            <p>Espresso, Čaj Menta, Čaj Breskva, Kava s Mlijekom, Cappuccino, Latte Macchiato, Mocha, Americano, Macchiato, Chai Latte, Topla čokolada, Irish Coffee, Matcha Latte, White Mocha, Zeleni čaj, Earl Grey čaj, Rooibos čaj.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="../../assets/icons/vv1.png" alt="Image 3">
+      <div class="popup-container">
+        <h3>Aparat sa grickalicama i slatkišima</h3>
+        <button class="ap3" (click)="openPopup('ap3')">Pogledaj izbor</button>
+        <div class="popup-overlay" *ngIf="isPopupVisible && selectedPopup === 'ap3'">
+          <div class="popup-content">
+            <button class="close-button" (click)="closePopup()">Close</button>
+            <h2>Aparat sa grickalicama i slatkišima</h2>
+            <p>Snickers, Čoksa, Lays, Doritos, Pringles, Kit Kat, Twix, Mars, Raffaello, Nutella, Oreo, Toblerone, Haribo, Ferrero Rocher, Prinčevi, M&M's, Bounty, Milka, Kinder Pingui, Skittles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

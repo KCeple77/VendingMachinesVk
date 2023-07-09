@@ -1,5 +1,4 @@
 /* home.component.css */
-/* Reset some default styles */
 body, ul {
     margin: 0;
     padding: 0;
@@ -36,8 +35,9 @@ body, ul {
   }
   
   .hero-text {
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.8); 
     padding: 10px;
+    margin-bottom: 10px;
   }
   
   p {
@@ -62,7 +62,7 @@ body, ul {
   
   .features {
     padding: 50px 0;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
   }
   
   .container {
@@ -89,11 +89,13 @@ body, ul {
   
   .feature p {
     font-size: 16px;
+    color: #ada7a7;
   }
   
   footer {
-    background-color: #f1f1f1;
+    background-color: #e2e2e2;
     padding: 20px;
     text-align: center;
+    
   }
   
