@@ -6,11 +6,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from '../api-authorization/login/login.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
+
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
 import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
@@ -28,6 +25,7 @@ import { AnimateModule } from 'primeng/animate';
 import { DataViewModule } from 'primeng/dataview';
 import { VendingMachinesService } from 'src/services/vending.machines.service';
 import { AccordionModule } from 'primeng/accordion';
+import { MachinesComponent } from './machines/machines.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +35,8 @@ import { AccordionModule } from 'primeng/accordion';
     LocationsComponent,
     AboutComponent,
     PageNotFoundComponent,
-    NavMenuComponent,
-    MachinesListComponent
+    MachinesListComponent,
+    MachinesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -57,6 +55,7 @@ import { AccordionModule } from 'primeng/accordion';
       { path: '', component: LandingPageComponent, pathMatch: 'full' },
       { path: 'pages/home', component: HomeComponent, pathMatch:'full'},
       { path: 'pages/locations', component: LocationsComponent, pathMatch:'full'},
+      { path: 'pages/machines', component: MachinesComponent, pathMatch:'full'},
       { path: 'pages/machines-list', component: MachinesListComponent, pathMatch:'full'},
       { path: 'pages/about', component: AboutComponent, pathMatch:'full'},
       { path: 'page-not-found', component: PageNotFoundComponent, pathMatch:'full'},

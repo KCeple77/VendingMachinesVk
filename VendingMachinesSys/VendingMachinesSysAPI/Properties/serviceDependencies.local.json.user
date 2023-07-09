@@ -4,14 +4,28 @@
       "restored": true,
       "restoreTime": "2023-07-08T14:29:33.880556Z"
     },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2023-07-09T16:48:05.9506622Z"
+    },
     "secrets1": {
       "restored": true,
       "restoreTime": "2023-06-25T21:56:52.2382915Z"
     }
   },
   "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "3221fbc6-c6f4-40f2-b758-8e0b584b3e3c"
+    },
     "secrets1.resourceGroupName": {
       "Name": "secrets1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "ZirProjekt"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
       "Type": "resourceGroup",
       "Value": "ZirProjekt"
     },

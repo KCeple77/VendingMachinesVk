@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using VendingMachinesSysWebApp.Data;
 using VendingMachinesSysWebApp.Models;
+using VendingMachinesSysWebApp.Services;
 
 namespace VendingMachinesSysWebApp
 {
@@ -33,6 +35,16 @@ namespace VendingMachinesSysWebApp
             services.AddAuthentication()
                 .AddIdentityServerJwt();
 
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.SignIn.RequireConfirmedEmail = true;
+            }
+            );
+            services.AddTransient<IEmailSender, EmailSender>();
+
             return services;
         }
 
@@ -52,6 +64,10 @@ namespace VendingMachinesSysWebApp
             app.UseStaticFiles();
             app.UseRouting();
 
+            app.UseAuthentication();
+            app.UseIdentityServer();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -60,10 +76,6 @@ namespace VendingMachinesSysWebApp
                 endpoints.MapRazorPages();
                 endpoints.MapFallbackToFile("index.html");
             });
-
-            app.UseAuthentication();
-            app.UseIdentityServer();
-            app.UseAuthorization();
 
             return app;
         }
