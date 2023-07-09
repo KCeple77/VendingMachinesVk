@@ -25,8 +25,7 @@ import { AnimateModule } from 'primeng/animate';
 import { DataViewModule } from 'primeng/dataview';
 import { VendingMachinesService } from 'src/services/vending.machines.service';
 import { AccordionModule } from 'primeng/accordion';
-
-
+import { MachinesComponent } from './machines/machines.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,8 @@ import { AccordionModule } from 'primeng/accordion';
     LocationsComponent,
     AboutComponent,
     PageNotFoundComponent,
-    MachinesListComponent
+    MachinesListComponent,
+    MachinesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -55,6 +55,7 @@ import { AccordionModule } from 'primeng/accordion';
       { path: '', component: LandingPageComponent, pathMatch: 'full' },
       { path: 'pages/home', component: HomeComponent, pathMatch:'full'},
       { path: 'pages/locations', component: LocationsComponent, pathMatch:'full'},
+      { path: 'pages/machines', component: MachinesComponent, pathMatch:'full'},
       { path: 'pages/machines-list', component: MachinesListComponent, pathMatch:'full'},
       { path: 'pages/about', component: AboutComponent, pathMatch:'full'},
       { path: 'page-not-found', component: PageNotFoundComponent, pathMatch:'full'},

@@ -1,0 +1,15 @@
+<p-accordion [multiple]="true">
+  <p-accordionTab *ngFor="let vendingMachine of this.vendingMachinesList" header="{{ vendingMachine.serialNumber }} - {{ vendingMachine.locations }}">
+    <p *ngIf="this.hasVendingMachineGotAnyProducts(vendingMachine); else vendingMachinesNoProducts">
+      <div *ngFor="let currProd of this.vendingMachine2Products.get(vendingMachine.serialNumber)">
+        Product ID: {{ currProd.productId }} <br/>
+        Name: {{ currProd.name }} <br/>
+        Price: {{ currProd.price }}€ <br/>
+        Quantity: {{ currProd.quantity }} <br/>
+        <hr/>
+      </div>
+    <ng-template #vendingMachinesNoProducts>
+      No products listed for this vending machine!
+    </ng-template>
+  </p-accordionTab>
+</p-accordion>
