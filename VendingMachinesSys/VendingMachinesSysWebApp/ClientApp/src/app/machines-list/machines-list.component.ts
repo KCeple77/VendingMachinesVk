@@ -58,7 +58,11 @@ export class MachinesListComponent {
   }
 
   hasVendingMachineGotAnyProducts(vendingMachine: VendingMachine): boolean {
-    const prods = this.vendingMachine2Products.get(vendingMachine.serialNumber);
+    return this.hasVendingMachineSNGotAnyProducts(vendingMachine.serialNumber);
+  }
+
+  hasVendingMachineSNGotAnyProducts(serialNumber: number) {
+    const prods = this.vendingMachine2Products.get(serialNumber);
 
     if(!prods) {
       return false;
