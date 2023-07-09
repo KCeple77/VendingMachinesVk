@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { tileLayer, latLng, circle, polygon, LatLng } from 'leaflet';
+import { tileLayer, latLng, circle, polygon, LatLng, marker, Marker, Map, icon } from 'leaflet';
 import { Observable } from 'rxjs';
 import { VendingMachine } from 'src/domain/VendingMachine';
 import { VendingMachinesService } from 'src/services/vending.machines.service';
+import { IconOptions } from 'leaflet';
 
 @Component({
   selector: 'app-locations',
@@ -12,7 +13,10 @@ import { VendingMachinesService } from 'src/services/vending.machines.service';
 export class LocationsComponent implements OnInit {
   vendingMachines!: VendingMachine[];
   zoom: number = 8;
-  center: LatLng = latLng(45.784585, 15.966989);
+  center: LatLng = latLng(44.784585, 16.966989);
+  mapMarkers: Marker[] = []; // Array to store the markers
+  selectedMarker: Marker | null = null; // Store the selected marker
+  map!: Map; // Leaflet Map instance
 
   options = {
     layers: [
@@ -54,6 +58,34 @@ export class LocationsComponent implements OnInit {
       console.log('Received Vending Machines data:');
       console.log(data);
       this.vendingMachines = data;
+      this.addMarkersToMap();
+    });
+  }
+
+  onMapReady(map: Map) {
+    this.map = map;
+  }
+
+  addMarkersToMap() {
+    // Remove existing markers
+    this.mapMarkers.forEach((marker) => marker.remove());
+    this.mapMarkers = [];
+
+    // Add markers for each vending machine
+    this.vendingMachines.forEach((machine) => {
+      const markerOptions = {
+        icon: icon({
+          iconUrl: '../assets/icons/redmarker.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+        }),
+      };
+      const newMarker = marker([machine.latitude, machine.longitude], markerOptions).addTo(this.map);
+      this.mapMarkers.push(newMarker);
+
+      newMarker.on('click', () => {
+        this.showMachineData(machine);
+      });
     });
   }
 
@@ -61,7 +93,41 @@ export class LocationsComponent implements OnInit {
     console.log('Machine:', machine);
     console.log('Latitude:', machine.latitude);
     console.log('Longitude:', machine.longitude);
+  
+    // Reset the previously selected marker color
+    if (this.selectedMarker) {
+      this.selectedMarker.setIcon(
+        icon({
+          iconUrl: '../assets/icons/redmarker.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+        })
+      );
+    }
+  
     this.center = latLng(machine.latitude, machine.longitude);
-    this.zoom = 16; 
+    this.zoom = 15;
+  
+    // Update the icon of the selected marker to blue
+    const selectedIconOptions: IconOptions = {
+      iconUrl: '../assets/icons/bluemarker3.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+    };
+  
+    const selectedIcon = icon(selectedIconOptions);
+  
+    const selectedMarker = this.mapMarkers.find(marker => marker.getLatLng().equals(this.center));
+    if (selectedMarker) {
+      selectedMarker.setIcon(selectedIcon);
+      this.selectedMarker = selectedMarker;
+  
+      // Fly to the new center with animation
+      this.map.flyTo(this.center, this.zoom, {
+        duration: 0.5, // Animation duration in seconds
+        easeLinearity: 0.25, // Easing factor
+      });
+    }
   }
-} 
+}
+
