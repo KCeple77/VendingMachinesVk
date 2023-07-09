@@ -19,7 +19,7 @@ namespace VendingMachinesSysAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetVendingMachines()
+        public async Task<ActionResult<IEnumerable<Product>>> GetProductsList()
         {
             var products = await _dbContext.Products
                 //.Include(vm => vm.Products) // Include related products
@@ -48,7 +48,7 @@ namespace VendingMachinesSysAPI.Controllers
             return product;
         }
 
-        private bool VendingMachineExists(int id)
+        private bool ProductExists(int id)
         {
             return _dbContext.Products.Any(e => e.ProductId == id);
         }
