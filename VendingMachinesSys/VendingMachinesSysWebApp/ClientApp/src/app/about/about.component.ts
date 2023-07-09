@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
+  isPopupVisible = false;
+  selectedPopup = '';
 
+  openPopup(popup: string) {
+    this.isPopupVisible = true;
+    this.selectedPopup = popup;
+  }
+
+  closePopup() {
+    this.isPopupVisible = false;
+    this.selectedPopup = '';
+  }
 }
