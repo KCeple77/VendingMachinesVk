@@ -2,6 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActiveDebugProfile>https</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>C:\Personal\ZirkanProjekt\VendingMachinesVk\.github\workflows\VendingMachinesSysWebApp20230710015844.yml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Personal\ZirkanProjekt\VendingMachinesVk\VendingMachinesSys\VendingMachinesSysAPI\Properties\PublishProfiles\VendingMachinesVk - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
